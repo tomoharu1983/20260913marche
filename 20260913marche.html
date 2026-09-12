@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご挨拶と、信州のはちみつの話｜合同会社T-RISE JAPAN</title>
+<meta name="description" content="マルシェにお越しくださった皆さまへ。今年の実りのご挨拶と、信州のはちみつの物語。合同会社T-RISE JAPAN。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f2ea;      /* 統一した温かい生成り */
+    --paper-2:#efe7d7;    /* 面・カード */
+    --ink:#322820;        /* 温かい濃茶の墨 */
+    --ink-soft:#5e4c31;
+    --muted:#8a7d6a;
+    --wine:#3b1e34;       /* ご挨拶の章の差し色 */
+    --wine-2:#5a3450;
+    --honey:#b8801e;      /* 章をつなぐ琥珀 */
+    --honey-deep:#9a5f0c;
+    --gold:#d8a63c;
+    --line:#e4d3ae;
+    --serif:"Shippori Mincho",serif;
+    --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:#e7ddc9;
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:16px;line-height:2.05;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .booklet{
+    max-width:660px;margin:0 auto;
+    background:var(--paper);
+    box-shadow:0 10px 50px rgba(60,40,15,.18);
+    overflow:hidden;
+  }
+  a{color:var(--honey);text-underline-offset:3px;}
+  a:focus-visible{outline:2px solid var(--honey);outline-offset:3px;border-radius:2px;}
+
+  /* ══ 第一章：ご挨拶 ══ */
+  .head{position:relative;padding:60px 30px 40px;overflow:hidden;text-align:center;}
+  .head::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(90% 70% at 50% -10%, rgba(90,52,80,.20), transparent 60%),
+      radial-gradient(60% 40% at 82% 6%, rgba(184,128,30,.14), transparent 55%);
+    opacity:0;animation:fade 1.6s ease-out .1s forwards;pointer-events:none;
+  }
+  @keyframes fade{to{opacity:1;}}
+  .head>*{position:relative;}
+  .greeting{
+    font-weight:600;font-size:clamp(.95rem,4.4vw,1.4rem);
+    line-height:1.6;letter-spacing:.05em;white-space:nowrap;
+  }
+  .head-rule{display:block;width:40px;height:1.5px;background:var(--honey);margin:30px auto 24px;}
+  .date{font-family:var(--sans);font-size:.84rem;letter-spacing:.16em;color:var(--muted);}
+  .date .venue{font-family:var(--serif);color:var(--wine-2);letter-spacing:.12em;}
+
+  .letter{padding:36px 30px 8px;}
+  .letter p{margin:0 0 1.7em;}
+  .letter p:last-child{margin-bottom:0;}
+  .turn{font-size:1.1em;color:var(--wine);padding-left:16px;border-left:2px solid var(--honey);}
+
+  .mission{
+    text-align:center;font-size:1.16em;color:var(--wine);
+    letter-spacing:.06em;line-height:1.9;margin:38px 30px 0;
+  }
+  .chapter-gap{height:66px;}
+
+  /* ══ 第二章：はちみつの話 ══ */
+  .cover{
+    background:
+      radial-gradient(ellipse at 50% 120%, rgba(216,166,60,.35), transparent 60%),
+      linear-gradient(165deg,#4A3419 0%,#6E4C18 60%,#95681A 100%);
+    color:#fff;padding:72px 44px 62px;text-align:center;position:relative;overflow:hidden;
+  }
+  .cover::after{
+    content:"";position:absolute;inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'><g fill='none' stroke='%23E4D3AE' stroke-width='1.1'><path d='M30 2 L54 16 L54 44 L30 58 L6 44 L6 16 Z'/><path d='M30 50 L54 64 L54 92 L30 106 L6 92 L6 64 Z'/></g></svg>");
+    opacity:.08;
+  }
+  .cover .inner{position:relative;z-index:1;}
+  .cover .drop{font-size:30px;color:var(--gold);margin-bottom:22px;letter-spacing:.4em;}
+  .cover .sub{font-family:var(--sans);font-size:12px;letter-spacing:.42em;color:#EBD9B4;margin-bottom:22px;text-indent:.42em;}
+  .cover h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,7vw,2.05rem);line-height:1.6;letter-spacing:.06em;}
+  .cover .lead{margin-top:26px;font-size:14.5px;color:#F0E3C8;font-weight:400;line-height:2.1;max-width:24em;margin:26px auto 0;}
+
+  .story{padding:52px 30px 0;}
+  .intro{font-size:16.5px;color:var(--ink-soft);line-height:2.3;text-align:center;margin-bottom:50px;font-weight:500;}
+  article{margin-bottom:46px;}
+  .num{font-family:var(--sans);font-size:12px;letter-spacing:.3em;color:var(--honey);margin-bottom:10px;}
+  .story h2{
+    font-family:var(--serif);font-weight:700;font-size:1.35rem;line-height:1.6;
+    margin-bottom:20px;position:relative;padding-bottom:16px;
+  }
+  .story h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:2px;background:var(--gold);}
+  .story p{font-size:15.5px;margin-bottom:18px;}
+  .story p:last-child{margin-bottom:0;}
+  .em{color:var(--honey-deep);font-weight:600;}
+
+  .flowers{background:var(--paper-2);border-radius:8px;padding:8px 24px;margin:8px 0 4px;border:1px solid var(--line);}
+  .flower{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);}
+  .flower:last-child{border-bottom:none;}
+  .flower .nm{font-weight:700;font-size:16px;color:var(--honey-deep);min-width:4.5em;flex-shrink:0;}
+  .flower .ds{font-size:14.5px;line-height:1.95;color:var(--ink-soft);font-weight:400;}
+
+  .memo{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 24px;margin:14px 0;background:#fff;}
+  .memo h3{font-size:16px;color:var(--honey-deep);margin-bottom:12px;font-weight:600;}
+  .memo p{font-size:14.5px;line-height:2.05;margin:0;}
+  .memo.care{background:#FBEEE4;border-color:#E5C2A8;border-left-color:#B5591F;}
+  .memo.care h3{color:#9A3B12;}
+
+  /* ══ 結び・署名（統合）══ */
+  .end{text-align:center;margin-top:58px;padding:46px 30px 62px;border-top:1px solid var(--line);}
+  .end .poem{font-size:16px;line-height:2.4;color:var(--ink-soft);font-weight:400;}
+  .end .after{margin-top:22px;color:var(--ink-soft);}
+  .end .sign{margin-top:36px;font-family:var(--sans);font-size:13px;letter-spacing:.24em;color:var(--honey-deep);}
+  .end .sign .brand{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:700;letter-spacing:.1em;margin-top:12px;color:var(--ink);}
+  .end .ig{display:inline-block;margin-top:26px;font-family:var(--serif);color:var(--honey);text-decoration:none;font-size:1rem;letter-spacing:.06em;}
+  .end .copy{font-family:var(--sans);font-size:.72rem;color:var(--muted);margin-top:20px;letter-spacing:.06em;}
+
+  @media(max-width:560px){
+    .cover{padding:56px 26px 50px;}
+    .letter,.story{padding-left:26px;padding-right:26px;}
+    .mission{margin-left:26px;margin-right:26px;}
+    .flower{flex-direction:column;gap:4px;}
+  }
+  @media(prefers-reduced-motion:reduce){.head::before{animation:none;opacity:1;}}
+  @media print{
+    body{background:#fff;}
+    .booklet{box-shadow:none;max-width:100%;}
+    .cover{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    article{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="booklet">
+
+  <!-- ══ 第一章：ご挨拶 ══ -->
+  <header class="head">
+    <h1 class="greeting">マルシェにお越しくださった皆さまへ</h1>
+    <span class="head-rule"></span>
+    <p class="date">2026.9.13　<span class="venue">Salon de Marche</span></p>
+  </header>
+
+  <main class="letter">
+    <p>今回のマルシェには、葡萄7種、ナチュラルワイン、はちみつをお持ちしました。手に取り、ご購入くださった皆さま、本当にありがとうございます。</p>
+
+    <p>夏の酷暑、そして9月に入ってからの長雨。私たちは、これまでにない一年を過ごしています。酷暑で巨峰は色づかず、長雨でナガノパープルの粒はひび割れ、はじけました。</p>
+
+    <p class="turn">それでも、今日お届けできた葡萄は、何も変わらない顔をしています。</p>
+
+    <p>甘い粒、酸っぱい粒、水っぽい粒、色づきの薄い粒。今年はいろいろな表情の葡萄が入っています。いつもとは違う実りの秋。作り手の切なさまで感じる、そんな長月となりました。</p>
+
+    <p>私たちは、作り手の現場に足を運び、地域の農業と文化の「今」を感じる活動を始めました。地域の人々だけでなく、間接的に地域と関わってくださる方を増やしていきたい。体験・宿泊・地産地消を多くの方へお届けし、地域の中だけでは解けない根っこの課題に向き合いたいと思っています。</p>
+  </main>
+
+  <p class="mission">地域の価値を、全国へ、そして未来へ。</p>
+
+  <div class="chapter-gap"></div>
+
+  <!-- ══ 第二章：はちみつの話 ══ -->
+  <section class="cover">
+    <div class="inner">
+      <div class="drop">&#10047;</div>
+      <div class="sub">SHINSHU HONEY</div>
+      <h1>信州のはちみつの話</h1>
+      <p class="lead">この一瓶ができるまでの、ミツバチと養蜂家の物語を、少しだけお話しさせてください。</p>
+    </div>
+  </section>
+
+  <div class="story">
+
+    <p class="intro">はちみつは、ミツバチと、それを見守る養蜂家との、長い時間の積み重ねから生まれます。召し上がる前に、その背景を知っていただけたら、味わいがきっと少し変わります。</p>
+
+    <article>
+      <div class="num">01</div>
+      <h2>ミツバチが、羽で仕上げた蜜</h2>
+      <p>花から集めたばかりの蜜は、まださらさらとして水分を多く含んでいます。ミツバチたちは巣の中で<span class="em">いっせいに羽ばたき、風を送って余分な水分を飛ばし</span>、じっくりと濃厚な蜜へと仕上げていきます。十分に熟したところで巣にフタをする——それが「完熟」の合図です。</p>
+      <p>このはちみつは、その完熟の蜜を<span class="em">加熱せず、そのまま瓶に詰めました</span>。火を入れると扱いやすくなる一方で、花ごとの繊細な香りは飛んでしまいます。ミツバチが時間をかけて仕上げた風味を、できるだけそのままお届けしたいと考えています。</p>
+    </article>
+
+    <article>
+      <div class="num">02</div>
+      <h2>花の数だけ、味があります</h2>
+      <p>ミツバチが飛ぶのは、巣箱からおよそ2〜3キロの範囲。そこで<span class="em">どの花の咲く場所に巣箱を置くかで、蜜の味が決まります</span>。そば畑のそばに置けばそばの蜜、りんご畑ならりんごの蜜。花の個性が、そのまま一瓶の個性になるのです。</p>
+      <div class="flowers">
+        <div class="flower"><span class="nm">アカシア</span><span class="ds">クセがなく、上品ですっきりした甘さ。はちみつが初めての方にも。白く固まりにくいのも特徴です。</span></div>
+        <div class="flower"><span class="nm">りんご</span><span class="ds">フルーティーでやさしい香り。信州の果樹畑ならではの、明るい味わいです。</span></div>
+        <div class="flower"><span class="nm">そば</span><span class="ds">濃い色と、深いコク。個性的で、一度好きになると忘れられない風味です。</span></div>
+        <div class="flower"><span class="nm">栗</span><span class="ds">ほろ苦さをふくむ、力強い味わい。通の方に選ばれる、大人のはちみつです。</span></div>
+      </div>
+    </article>
+
+    <article>
+      <div class="num">03</div>
+      <h2>ミツバチは、畑も実らせています</h2>
+      <p>ミツバチが花から花へと蜜を集めて回るとき、体についた花粉が運ばれ、自然と受粉が行われます。りんごやさくらんぼをはじめ、<span class="em">多くの果物や野菜は、こうしたミツバチの働きなしには実をつけません</span>。</p>
+      <p>つまりこのはちみつを作るミツバチたちは、蜜を届けてくれるだけでなく、信州の畑そのものを静かに支えてくれている存在でもあります。一瓶のはちみつの向こうには、豊かに実る畑の風景が広がっています。</p>
+    </article>
+
+    <article>
+      <div class="num">04</div>
+      <h2>本来は、冬を越すための蓄え</h2>
+      <p>ミツバチは冬眠しません。花のない冬のあいだ、群れで身を寄せ合って暖をとりながら、<span class="em">夏のうちに蓄えたはちみつを少しずつ食べて</span>春を待ちます。はちみつは、ミツバチにとって命をつなぐ大切な備えなのです。</p>
+      <p>私たちがいただくのは、その蓄えを、ミツバチの暮らしを守れる範囲で分けてもらったもの。だからこそ、一滴もむだにせず味わっていただけたら、これほど嬉しいことはありません。</p>
+    </article>
+
+    <article>
+      <div class="num">05</div>
+      <h2>おいしく召し上がっていただくために</h2>
+
+      <div class="memo">
+        <h3>白く固まってきたら</h3>
+        <p>時間がたつと白く固まることがありますが、これは天然はちみつが自然に結晶化しただけで、傷んだわけではありません。むしろ純粋な証です。<span class="em">40〜50℃くらいのぬるま湯で湯せん</span>すれば、もとの液体に戻ります（熱くしすぎると風味が損なわれるのでご注意ください）。</p>
+      </div>
+
+      <div class="memo">
+        <h3>保存について</h3>
+        <p>直射日光を避け、<span class="em">常温で保存</span>してください。糖度が高いため、とても長く楽しんでいただけます。冷蔵庫はかえって固まりやすくなるので避けてください。</p>
+      </div>
+
+      <div class="memo care">
+        <h3>1歳未満のお子様にはご注意ください</h3>
+        <p>はちみつは、<span class="em">1歳未満の赤ちゃんには与えないでください</span>。まれにお腹の中で菌が増えてしまうことがあり、加熱しても防げないためです。1歳を過ぎれば、安心して召し上がっていただけます。大人の方やお子様は心配ありません。</p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ══ 結び・署名 ══ -->
+  <div class="end">
+    <p class="poem">一匹のミツバチが一生のあいだに集める蜜は、<br>ティースプーン一杯にも満たないと言われます。<br>この一瓶は、数えきれない小さな一生と、<br>それを見守った養蜂家の手が、そっと重なったものです。</p>
+    <p class="after">どうぞ、ゆっくりと味わってください。</p>
+    <div class="sign">
+      信州より、心を込めて
+      <span class="brand">合同会社T-RISE JAPAN</span>
+    </div>
+    <a class="ig" href="https://www.instagram.com/trisejapan/" target="_blank" rel="noopener">@trisejapan</a>
+    <p class="copy">© <span id="yr"></span> 合同会社T-RISE JAPAN</p>
+  </div>
+
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
